@@ -68,3 +68,7 @@
 .category-label:hover {
     color: white;
 }
+
+.nav-link:hover {
+    color: blue;
+}
