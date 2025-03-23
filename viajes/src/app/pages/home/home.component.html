@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <h1 class="blog-title">Blog de viajes</h1>
+    <label class="category-label">Categoria</label>
+    <select [(ngModel)]="filtroCategoria" class="form-select mb-3 custom-select" (change)="filtrarPorCategoria()">
+        <option value="">Todas</option>
+        @for (cat of categorias; track $index) {
+        <option [value]="cat.titulo">{{cat.titulo}}</option>
+        }
+    </select>
+
+    <div class="row g-3">
+        @for (post of posts; track $index) {
+        <div class="col-md-4 d-flex">
+            <div class="card h-100 d-flex flex-column card-custom">
+                <img [src]="post.imagen" class="card-img-top img-custom" alt="{{post.titulo}}">
+                <div class="card-body flex-column flex-grow-1">
+                    <h4 class="card-title">{{post.titulo}}</h4>
+                    <p class="card-text small">{{post.texto}}</p>
+                    <p class="card-text small"><strong>Fecha:</strong> {{post.fecha}}</p>
+                    <p class="card-text small"><strong>Autor:</strong> {{post.autor}}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

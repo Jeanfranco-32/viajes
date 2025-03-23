@@ -7,6 +7,6 @@ export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: 'home', component: HomeComponent },
     { path: 'new', component: NewComponent },
-    { path: 'post', component: PostComponent },
+    { path: 'post/:idpost', component: PostComponent },
     { path: '**', redirectTo: 'home' }
 ];

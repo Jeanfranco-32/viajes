@@ -1,0 +1,70 @@
+.card-custom {
+    max-height: 500px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 1s;
+    background-color: whitesmoke;
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.img-custom {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.custom-select {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: red;
+}
+
+.blog-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.category-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.category-label:hover {
+    color: white;
+}
