@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../interfaces/category.interface';
 import { Post } from '../interfaces/post.interface';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable({
@@ -65,6 +66,7 @@ export class ServicioService {
 
   ];
 
+
   getAll(): Post[] {
     return this.posts;
   }
@@ -77,8 +79,8 @@ export class ServicioService {
     return this.posts.find(post => post.id === id);
   }
 
-  insert(post: Post): void {
-    this.posts.push(post);
+  addPost(post: Post): void {
+    this.posts.push(post)
   }
 
   getAllCategories(): Category[] {
