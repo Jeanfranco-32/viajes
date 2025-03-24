@@ -1,74 +1,290 @@
-.card-custom {
-    max-height: 500px;
-    overflow: hidden;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.clickable-icon {
     cursor: pointer;
-    transition: 1s;
-    background-color: whitesmoke;
+}
+
+.logo-container img {
+    max-height: 120px;
+    /* Limita la altura del logo */
+    height: auto;
+}
+
+
+.navbar {
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.d .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: gray;
+    color: black;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    background-color: gray;
+    color: white;
+}
+
+.category-label {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+}
+
+.form-select.custom-select {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-select.custom-select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.row.g-3 {
+    margin-top: 20px;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-custom:hover {
-    transform: scale(1.05);
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.img-custom {
-    height: 220px;
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-height: 200px;
     object-fit: cover;
 }
 
 .card-body {
-    padding: 10px;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .card-text {
-    font-size: 14px;
+    font-size: 1rem;
+    color: #555;
 }
 
-.custom-select {
-    background-color: #fff;
-    border: 2px solid #007bff;
-    color: #333;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
+.card-text small {
+    color: #888;
 }
 
-.custom-select:focus {
-    outline: none;
-    border-color: red;
+.card-body p {
+    margin-bottom: 5px;
 }
 
-.blog-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: black;
+.bg-image {
+    background-image: url('https://wallpapers.com/images/hd/world-wonders-to-travel-wallpaper-gc3y5vth644x90n1.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.bg-image h1,
+.bg-image p {
+    position: relative;
+    z-index: 2;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+
+.custom-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card-img {
+    border-bottom: 2px solid #eee;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.custom-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+.custom-card-text {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+
+.custom-card-date {
+    font-size: 0.8rem;
+    color: #95a5a6;
+    text-align: right;
+    margin-top: 10px;
+}
+
+
+.row {
+    margin-top: 30px;
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .category-label {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-    padding-left: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.category-label:hover {
-    color: white;
+
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bg-image h1 {
+        font-size: 1.5rem;
+    }
+
+    .bg-image p {
+        font-size: 0.875rem;
+    }
+
+    .logo-container img {
+        max-width: 150px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .clickable-icon {
+        font-size: 1.2rem;
+    }
 }
 
-.nav-link:hover {
-    color: blue;
+@media (max-width: 576px) {
+    .d-flex {
+        flex-direction: column;
+
+        i {
+            margin: 5px;
+        }
+    }
+
+    .bg-image p {
+        font-size: 1rem;
+    }
+
+    .navbar-nav {
+        font-size: 0.875rem;
+        margin: 5px;
+
+        .nav-item {
+            margin: 5px;
+        }
+    }
+
+    .card-body h4 {
+        font-size: 1.2rem;
+    }
+
+    .card-body p {
+        font-size: 1rem;
+    }
+
+    .category-label {
+        font-size: 1.5rem;
+    }
+
+    .form-select {
+        font-size: 0.875rem;
+    }
 }

@@ -3,10 +3,11 @@ import { Post } from '../../interfaces/post.interface';
 import { Category } from '../../interfaces/category.interface';
 import { ServicioService } from '../../services/servicio.service';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [FormsModule,],
+  imports: [FormsModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

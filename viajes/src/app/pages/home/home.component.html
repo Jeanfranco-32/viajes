@@ -1,31 +1,56 @@
-<div class="container mt-4">
-    <h1 class="blog-title">Blog de viajes</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container-fluid justify-content-center">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<div class="d-flex align-items-center justify-content-between p-3 bg-dark text-white">
+    <i class="fa-solid fa-phone me-2 text-warning clickable-icon"><span>555 52 98 74</span></i>
+    <i class="fa-brands fa-facebook me-2 text-primary clickable-icon"><span>facebook</span></i>
+    <i class="fa-brands fa-instagram me-2 text-danger clickable-icon"><span>instagram</span></i>
+    <i class="fa-brands fa-twitter text-info clickable-icon"><span>twitter</span></i>
+</div>
+<div class="d-flex justify-content-between align-items-center p-3">
+    <div class="logo-container">
+        <a href="https://www.tu-pagina.com" class="clickable-logo">
+            <img src="https://img.freepik.com/vector-gratis/concepto-viaje-logotipo-empresarial_23-2148616023.jpg?semt=ais_hybrid"
+                alt="Logo">
+        </a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid justify-content-end">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    <a class="nav-link active me-3" aria-current="page" href="#">Active</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="new">new</a>
+                    <a class="nav-link me-3" href="new">New</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="post/:idpost">post</a>
+                    <a class="nav-link me-3" href="post/:idpost">Post</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <label class="category-label">Categoria</label>
+</div>
+<div>
+    <div class="bg-image">
+        <h1>Escapadas Inolvidables: Explora Destinos Únicos y Sorprendentes</h1>
+        <p>En "Escapadas Inolvidables: Explora Destinos Únicos y Sorprendentes", te ofrecemos guías, consejos y
+            relatos inspiradores para descubrir los destinos más fascinantes del planeta. Desde ciudades vibrantes
+            hasta paisajes naturales, cada viaje es una oportunidad para vivir experiencias únicas. Ya seas un
+            viajero experimentado o novato, aquí encontrarás todo lo necesario para hacer de tu próxima aventura
+            algo inolvidable.</p>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <label class="category-label">Post</label>
     <select [(ngModel)]="filtroCategoria" class="form-select mb-3 custom-select" (change)="filtrarPorCategoria()">
         <option value="">Todas</option>
         @for (cat of categorias; track $index) {
         <option [value]="cat.titulo">{{cat.titulo}}</option>
         }
     </select>
-
     <div class="row g-3">
         @for (post of posts; track $index) {
-        <div class="col-md-4 d-flex">
+        <div class="col-12 col-md-4 d-flex">
             <div class="card h-100 d-flex flex-column card-custom">
                 <img [src]="post.imagen" class="card-img-top img-custom" alt="{{post.titulo}}">
                 <div class="card-body flex-column flex-grow-1">
@@ -33,9 +58,59 @@
                     <p class="card-text small">{{post.texto}}</p>
                     <p class="card-text small"><strong>Fecha:</strong> {{post.fecha}}</p>
                     <p class="card-text small"><strong>Autor:</strong> {{post.autor}}</p>
+                    <a [routerLink]="['/post', post.id]" class="btn btn-info mt-auto">Leer más</a>
                 </div>
             </div>
         </div>
         }
     </div>
+
+    <label class="category-label">Noticias</label>
+    <div class="row g-4">
+        <!-- Noticia 1 -->
+        <div class="col-12 col-md-4">
+            <div class="card custom-card">
+                <img src="https://via.placeholder.com/150" class="card-img-top img-fluid custom-card-img"
+                    alt="Noticia 1">
+                <div class="card-body">
+                    <h5 class="card-title custom-card-title">Nueva oferta de viajes a Europa</h5>
+                    <p class="card-text custom-card-text">Aprovecha las ofertas exclusivas para viajar a Europa este
+                        verano.
+                        ¡Consulta los destinos más visitados y sus descuentos!</p>
+                    <p class="card-text custom-card-date"><strong>Fecha:</strong> 23 de marzo de 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Noticia 2 -->
+        <div class="col-12 col-md-4">
+            <div class="card custom-card">
+                <img src="https://via.placeholder.com/150" class="card-img-top img-fluid custom-card-img"
+                    alt="Noticia 2">
+                <div class="card-body">
+                    <h5 class="card-title custom-card-title">Tendencias de turismo para 2025</h5>
+                    <p class="card-text custom-card-text">Descubre las nuevas tendencias de viaje para 2025: desde
+                        viajes
+                        sostenibles hasta destinos menos conocidos...</p>
+                    <p class="card-text custom-card-date"><strong>Fecha:</strong> 21 de marzo de 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Noticia 3 -->
+        <div class="col-12 col-md-4">
+            <div class="card custom-card">
+                <img src="https://via.placeholder.com/150" class="card-img-top img-fluid custom-card-img"
+                    alt="Noticia 3">
+                <div class="card-body">
+                    <h5 class="card-title custom-card-title">Cómo viajar de manera responsable</h5>
+                    <p class="card-text custom-card-text">Consejos para realizar viajes responsables con el medio
+                        ambiente y las
+                        comunidades locales. ¡Sé parte del cambio!</p>
+                    <p class="card-text custom-card-date"><strong>Fecha:</strong> 19 de marzo de 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
