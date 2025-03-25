@@ -1,1 +1,10 @@
-<p>post works!</p>
+<div class="container">
+    @for (post of posts; track $index) {
+    <h1>{{ post.titulo }}</h1>
+    <img [src]="post.imagen" alt="{{ post.titulo }}" class="img-fluid">
+    <p>{{ post.texto }}</p>
+    <p><strong>Autor:</strong> {{ post.autor }}</p>
+    <p><strong>Categoría:</strong> {{ post.categoria.titulo }}</p>
+    <p><strong>Fecha:</strong> {{ post.fecha | date }}</p>
+    }
+</div>

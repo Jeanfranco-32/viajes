@@ -20,9 +20,7 @@ export class HomeComponent {
   ngOnInit(): void {
     this.posts = this.ServicioService.getAll();
     this.categorias = this.ServicioService.getAllCategories();
-    /*     this.ServicioService.posts$.subscribe(posts => {
-          this.posts = posts;
-        }); */
+
   }
 
   filtrarPorCategoria(): void {
