@@ -27,6 +27,8 @@ export class NewComponent {
       categoria: ['', Validators.required],
       fecha: [new Date(), Validators.required],
     });
+
+    this.posts = this.servicoService.getAll();
   }
 
   checkControl(controlName: string, errorName: string): boolean {
@@ -53,3 +55,4 @@ export class NewComponent {
     }
   }
 }
+

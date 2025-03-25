@@ -32,11 +32,11 @@
 <div>
     <div class="bg-image">
         <h1>Escapadas Inolvidables: Explora Destinos Únicos y Sorprendentes</h1>
-        <p>En "Escapadas Inolvidables: Explora Destinos Únicos y Sorprendentes", te ofrecemos guías, consejos y
-            relatos inspiradores para descubrir los destinos más fascinantes del planeta. Desde ciudades vibrantes
-            hasta paisajes naturales, cada viaje es una oportunidad para vivir experiencias únicas. Ya seas un
-            viajero experimentado o novato, aquí encontrarás todo lo necesario para hacer de tu próxima aventura
-            algo inolvidable.</p>
+        <div class="container">
+            <p>"Descubre los destinos más fascinantes, consejos de viaje imprescindibles y experiencias inolvidables
+                para
+                inspirarte a recorrer el mundo. ¡Aventúrate con nosotros!"</p>
+        </div>
     </div>
 </div>
 
@@ -58,7 +58,8 @@
                     <p class="card-text small">{{post.texto}}</p>
                     <p class="card-text small"><strong>Fecha:</strong> {{post.fecha}}</p>
                     <p class="card-text small"><strong>Autor:</strong> {{post.autor}}</p>
-                    <a [routerLink]="['/post', post.id]" class="btn btn-info mt-auto">Leer más</a>
+                    <a [routerLink]="['/post', post.id]"
+                        class="btn btn-outline-primary mt-auto shadow-sm rounded-pill px-4"> Leer más</a>
                 </div>
             </div>
         </div>
@@ -67,7 +68,7 @@
 
     <label class="category-label">Noticias</label>
     <div class="row g-4">
-        <!-- Noticia 1 -->
+
         <div class="col-12 col-md-4">
             <div class="card custom-card">
                 <img src="https://via.placeholder.com/150" class="card-img-top img-fluid custom-card-img"
@@ -82,7 +83,6 @@
             </div>
         </div>
 
-        <!-- Noticia 2 -->
         <div class="col-12 col-md-4">
             <div class="card custom-card">
                 <img src="https://via.placeholder.com/150" class="card-img-top img-fluid custom-card-img"
@@ -97,7 +97,6 @@
             </div>
         </div>
 
-        <!-- Noticia 3 -->
         <div class="col-12 col-md-4">
             <div class="card custom-card">
                 <img src="https://via.placeholder.com/150" class="card-img-top img-fluid custom-card-img"

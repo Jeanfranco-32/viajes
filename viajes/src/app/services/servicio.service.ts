@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../interfaces/category.interface';
 import { Post } from '../interfaces/post.interface';
-import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable({
@@ -16,6 +15,21 @@ export class ServicioService {
     { id: 4, titulo: 'Rural' },
     { id: 5, titulo: 'Festivales' },
   ];
+
+  constructor() {
+    this.loadPostsFromStorage();
+  }
+
+  private loadPostsFromStorage() {
+    const storedPosts = localStorage.getItem('posts');
+    if (storedPosts) {
+      this.posts = JSON.parse(storedPosts);
+    }
+  }
+
+  private savePostsToLocalStorage() {
+    localStorage.setItem('posts', JSON.stringify(this.posts));
+  }
 
   private posts: Post[] = [
     {
@@ -81,6 +95,7 @@ export class ServicioService {
 
   addPost(post: Post): void {
     this.posts.push(post)
+    this.savePostsToLocalStorage();
   }
 
   getAllCategories(): Category[] {
