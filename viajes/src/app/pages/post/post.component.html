@@ -1,10 +1,18 @@
-<div class="container">
-    @for (post of posts; track $index) {
-    <h1>{{ post.titulo }}</h1>
-    <img [src]="post.imagen" alt="{{ post.titulo }}" class="img-fluid">
-    <p>{{ post.texto }}</p>
-    <p><strong>Autor:</strong> {{ post.autor }}</p>
-    <p><strong>Categoría:</strong> {{ post.categoria.titulo }}</p>
-    <p><strong>Fecha:</strong> {{ post.fecha | date }}</p>
-    }
-</div>
+<body class="fondo">
+    <div class="container">
+        @for (post of posts; track $index) {
+        <div class="col-md-12">
+            <div class="post-container">
+                <h2 class="fw-bold post-title">{{ post.titulo }}</h2>
+                <img [src]="post.imagen" alt="{{ post.titulo }}">
+                <p class="post-text">{{ post.texto }}</p>
+                <p class="post-meta"><strong>Autor:</strong> {{ post.autor }}</p>
+                <p class="post-meta"><strong>Categoría:</strong> <span class="badge">{{ post.categoria.titulo }}</span>
+                </p>
+                <p class="post-meta"><strong>Fecha:</strong> {{ post.fecha | date }}</p>
+            </div>
+        </div>
+        }
+        <a [routerLink]="['/home']" class="custom-link">Volver a Home</a>
+    </div>
+</body>

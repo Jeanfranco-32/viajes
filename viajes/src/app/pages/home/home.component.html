@@ -56,8 +56,6 @@
                 <div class="card-body flex-column flex-grow-1">
                     <h4 class="card-title">{{post.titulo}}</h4>
                     <p class="card-text small">{{post.texto}}</p>
-                    <p class="card-text small"><strong>Fecha:</strong> {{post.fecha}}</p>
-                    <p class="card-text small"><strong>Autor:</strong> {{post.autor}}</p>
                     <a [routerLink]="['/post', post.id]"
                         class="btn btn-outline-primary mt-auto shadow-sm rounded-pill px-4"> Leer más</a>
                 </div>
