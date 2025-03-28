@@ -3,7 +3,7 @@ import { Post } from '../../interfaces/post.interface';
 import { Category } from '../../interfaces/category.interface';
 import { ServicioService } from '../../services/servicio.service';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +13,17 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
   posts: Post[] = [];
+  postId: string | null = null;
   categorias: Category[] = [];
   filtroCategoria: string = '';
-  constructor(private ServicioService: ServicioService) { }
+  constructor(private ServicioService: ServicioService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.posts = this.ServicioService.getAll();
     this.categorias = this.ServicioService.getAllCategories();
 
+    this.postId = this.route.snapshot.paramMap.get('id');
+    console.log("Post ID:", this.postId);
   }
 
   filtrarPorCategoria(): void {
