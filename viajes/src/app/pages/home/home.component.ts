@@ -26,5 +26,4 @@ export class HomeComponent {
   filtrarPorCategoria(): void {
     this.posts = this.filtroCategoria ? this.ServicioService.getByCategoria(this.filtroCategoria) : this.ServicioService.getAll();
   }
-
 }

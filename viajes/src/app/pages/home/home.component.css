@@ -38,6 +38,63 @@
     color: white;
 }
 
+/* -------- */
+
+.sobre-nosotros {
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.sobre-nosotros h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sobre-nosotros .lead {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-nosotros p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.sobre-nosotros .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-nosotros .col-md-6 {
+    text-align: center;
+}
+
+.sobre-nosotros img {
+    max-width: 100%;
+    /* Hace que la imagen sea responsiva */
+    height: auto;
+    /* Mantiene la relación de aspecto */
+    border-radius: 8px;
+    /* Borda redondeada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra sutil */
+}
+
+
+
+
 .category-label {
     font-size: 2rem;
     font-weight: bold;
@@ -324,11 +381,7 @@ footer .text-center p strong {
     color: #f1f1f1;
 }
 
-@media (min-width: 576px) {
-    .clickable-icon {
-        display: inline;
-    }
-}
+
 
 @media (min-width: 992px) {
     .bg-video video {
