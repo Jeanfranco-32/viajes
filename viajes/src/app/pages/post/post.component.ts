@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-post',
-  imports: [FormsModule, DatePipe, RouterLink],
+  imports: [FormsModule, DatePipe],
   templateUrl: './post.component.html',
   styleUrl: './post.component.css'
 })

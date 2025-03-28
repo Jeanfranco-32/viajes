@@ -1,10 +1,29 @@
+<div class="navbar-container d-flex justify-content-between align-items-center p-3 ">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active me-3 text-white" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-3 text-white" href="new">New</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-3 text-white" href="post/:idpost">Post</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
 <body class="fondo">
-    <div class="container">
+    <div class="container mt-5 mb-5">
         @for (post of posts; track $index) {
         <div class="col-md-12">
             <div class="post-container">
                 <h2 class="fw-bold post-title">{{ post.titulo }}</h2>
-                <img [src]="post.imagen" alt="{{ post.titulo }}">
+                <img [src]="post.imagen" alt="{{ post.titulo }}"
+                    style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
                 <p class="post-text">{{ post.texto }}</p>
                 <p class="post-meta"><strong>Autor:</strong> {{ post.autor }}</p>
                 <p class="post-meta"><strong>Categoría:</strong> <span class="badge">{{ post.categoria.titulo }}</span>
@@ -13,6 +32,75 @@
             </div>
         </div>
         }
-        <a [routerLink]="['/home']" class="custom-link">Volver a Home</a>
-    </div>
-</body>
+
+
+        <div class="news-section">
+            <h2>Últimas Noticias</h2>
+            <div class="news-item">
+                <img src="https://i.pinimg.com/originals/28/ac/fc/28acfc1a654bfd96e70ae3c87239a3c3.png"
+                    alt="Imagen de noticia 1">
+                <h3>"El Turismo Mundial Experimenta un Crecimiento Impresionante: Nuevas Rutas y Destinos Surgen como
+                    Opciones Populares"</h3>
+                <p>El turismo global ha experimentado un notable auge en los últimos meses, con un incremento
+                    significativo en los viajeros que buscan explorar destinos fuera de los circuitos tradicionales.
+                    Según los últimos informes de la Organización Mundial del Turismo (OMT), se ha registrado un aumento
+                    del 18% en el número de viajeros internacionales durante el primer trimestre del 2025, marcando un
+                    retorno a niveles previos a la pandemia.
+
+                    Diversos destinos emergentes, desde las Islas Azores en Portugal hasta la región del desierto de
+                    Atacama en Chile, se están convirtiendo en favoritos entre los turistas. Las nuevas rutas aéreas y
+                    la mejora en la infraestructura de transporte han facilitado el acceso a lugares menos conocidos,
+                    permitiendo que los viajeros descubran culturas y paisajes únicos.
+
+                    Expertos en la industria señalan que esta tendencia no solo responde a la búsqueda de aventuras,
+                    sino también a un cambio en la mentalidad de los turistas, quienes buscan experiencias auténticas y
+                    responsables. A medida que las nuevas generaciones se inclinan hacia el ecoturismo y el turismo
+                    sostenible, el sector se adapta a sus demandas, ofreciendo opciones que promuevan el respeto por el
+                    medio ambiente y las comunidades locales.
+
+                    En este contexto, los profesionales del sector pronostican que el turismo continuará siendo una de
+                    las industrias de mayor crecimiento a nivel mundial, con más personas dispuestas a descubrir el
+                    mundo, cada vez más motivadas por la exploración y el aprendizaje.</p>
+            </div>
+            <div class="news-item">
+                <img src="https://static.grupojoly.com/clip/6f21099a-68f1-49c9-bb4a-fd8060de9a1e_source-aspect-ratio_1600w_0.jpg"
+                    alt="Imagen de noticia 2">
+                <h3>"Las Experiencias de Viaje Personalizadas Se Impulsan: Los Turistas Prefieren Rutas Únicas y a
+                    Medida"</h3>
+                <p>Texto:
+
+                    En un mundo cada vez más conectado, los viajeros de hoy buscan experiencias personalizadas que se
+                    adapten a sus intereses y preferencias. Según un reciente estudio de la consultora global McKinsey,
+                    el 65% de los turistas internacionales indica que prefieren itinerarios a medida en lugar de los
+                    paquetes turísticos tradicionales. Este cambio en las demandas está impulsando el crecimiento de
+                    agencias de viajes especializadas en la creación de rutas únicas, que van desde recorridos
+                    gastronómicos exclusivos en Italia hasta expediciones de ecoturismo en la selva amazónica.
+
+                    Los expertos en la industria turística sugieren que la tecnología juega un papel clave en esta
+                    tendencia, ya que las aplicaciones móviles y las plataformas de planificación de viajes permiten a
+                    los turistas crear itinerarios basados en sus pasiones personales, como la fotografía, el arte o el
+                    senderismo. Además, se observa un aumento en los viajes de lujo adaptados a las necesidades de los
+                    viajeros, lo que ofrece más privacidad, comodidad y una conexión más profunda con el destino. Con
+                    estas nuevas demandas, las agencias de viajes se están adaptando rápidamente para ofrecer
+                    experiencias que van más allá del turismo masivo.</p>
+            </div>
+            <div class="news-item">
+                <img src="https://visuatex.com/wp-content/uploads/2024/04/persona-con-unas-gafas-de-realidad-virtual-en-un-l-PLi27J9fQ4mvBEuSz57q4w-WV7h8Qe2Q7Gav0b_JWecHQ.jpeg"
+                    alt="Imagen de noticia 3">
+                <h3>"Los Viajes Virtuales: Una Tendencia que Gana Terreno en el Mundo del Turismo"</h3>
+                <p>Los avances tecnológicos están revolucionando el concepto tradicional de viajar, y una de las últimas
+                    tendencias que ha ido ganando popularidad es el turismo virtual. Gracias a la realidad aumentada
+                    (AR) y la realidad virtual (VR), los turistas ahora pueden explorar destinos lejanos desde la
+                    comodidad de su hogar. Empresas de turismo han comenzado a ofrecer experiencias inmersivas, como
+                    recorridos virtuales por museos en París o safaris interactivos en África, permitiendo a los
+                    viajeros conocer nuevos lugares sin necesidad de desplazarse físicamente.
+
+                    Aunque el turismo virtual no reemplaza la experiencia de viajar en persona, muchos expertos
+                    coinciden en que ofrece una excelente opción para aquellos que no pueden viajar debido a
+                    restricciones de movilidad, tiempo o presupuesto. Además, se espera que la tendencia crezca aún más
+                    en el futuro, con el desarrollo de nuevas tecnologías que permitirán experiencias más realistas y
+                    accesibles. En este sentido, el turismo virtual no solo abre nuevas posibilidades para los viajeros,
+                    sino que también ofrece un medio para explorar destinos que podrían no estar en la lista de
+                    prioridades de muchos.</p>
+            </div>
+        </div>
