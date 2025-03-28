@@ -47,6 +47,109 @@ body {
     padding-right: 30px;
 }
 
+.destinos-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.destinos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.destino {
+    text-align: center;
+    width: 30%;
+    margin: 10px;
+}
+
+.destino img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
+/* consejos section */
+
+.consejos-section {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #4a4a4a;
+}
+
+.consejos-section h2 {
+    color: #d84315;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.consejos-section p {
+    font-size: 18px;
+    color: #5d4037;
+    margin: 12px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 5px solid #d84315;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.consejos-section p:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(5px);
+}
+
+/* testimonios section*/
+
+.testimonios-section {
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #004d40;
+}
+
+.testimonios-section h2 {
+    color: #00796b;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.testimonio {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-left: 5px solid #00796b;
+    border-radius: 8px;
+    margin: 15px auto;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonio:hover {
+    transform: scale(1.05);
+}
+
+.testimonio p {
+    font-size: 18px;
+    color: #333;
+}
+
+
 
 /* Fondo elegante */
 .fondo {

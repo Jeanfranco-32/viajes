@@ -25,5 +25,15 @@ export class PostComponent {
       this.posts = this.servicioService.getAll();
     }
   }
+
+  openClick() {
+    const id = Number(window.location.pathname.split('/').pop());
+    const post = this.servicioService.getById(id);
+    if (post) {
+      this.posts = [post];
+    } else {
+      this.posts = this.servicioService.getAll();
+    }
+  }
 }
 
