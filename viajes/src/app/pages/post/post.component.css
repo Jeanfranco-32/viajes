@@ -19,7 +19,7 @@ body {
 }
 
 .nav-link {
-    color: white !important;
+    color: white;
     font-size: 1.1rem;
     transition: color 0.3s, transform 0.3s;
 }
@@ -27,12 +27,12 @@ body {
 /* Active link */
 .nav-link.active {
     font-weight: bold;
-    color: #007bff !important;
+    color: #007bff;
 }
 
 /* Hover effect for links */
 .nav-link:hover {
-    color: #ffc107 !important;
+    color: #ffc107;
     transform: scale(1.1);
 }
 

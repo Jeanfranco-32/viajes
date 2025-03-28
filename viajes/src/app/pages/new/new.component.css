@@ -3,3 +3,34 @@
     width: 100%;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
+
+.navbar-container {
+    background-color: #343a40;
+    border-bottom: 2px solid #495057;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav {
+    margin-right: 0;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+.nav-item {
+    margin-right: 15px;
+}
