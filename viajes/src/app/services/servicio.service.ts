@@ -76,8 +76,16 @@ export class ServicioService {
       imagen: 'https://images.squarespace-cdn.com/content/v1/5c1b9b60b10598f4780de648/4abc564d-b00f-4ad4-9bf4-27547d48cedf/shutterstock_201180134.jpg',
       fecha: '2025-11-17',
       categoria: this.categorias[4]
+    },
+    {
+      id: 6,
+      titulo: 'Nueva York: La Ciudad que Nunca Duerme 🌆🗽',
+      texto: 'Nueva York, la ciudad que nunca duerme, es un crisol de culturas, arte y vida urbana. Desde Times Square hasta Central Park, pasando por la Estatua de la Libertad y el Empire State Building, la Gran Manzana ofrece una experiencia vibrante y única. Ya sea que busques entretenimiento, gastronomía o simplemente perderte en sus calles, Nueva York tiene algo para todos.',
+      autor: 'Carlos Hernández',
+      imagen: 'https://gentleman.com.mx/wp-content/uploads/2024/10/new-york.jpeg',
+      fecha: '2025-10-04',
+      categoria: this.categorias[2]
     }
-
   ];
 
 
