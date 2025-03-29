@@ -3,7 +3,6 @@ import { Post } from '../../interfaces/post.interface';
 import { ServicioService } from '../../services/servicio.service';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-post',

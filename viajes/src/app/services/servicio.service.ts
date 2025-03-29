@@ -101,4 +101,6 @@ export class ServicioService {
   getAllCategories(): Category[] {
     return this.categorias;
   }
+
 }
+
