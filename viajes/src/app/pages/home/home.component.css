@@ -10,7 +10,6 @@
 
 .logo-container img {
     max-height: 120px;
-    /* Limita la altura del logo */
     height: auto;
 }
 
@@ -37,8 +36,6 @@
     background-color: gray;
     color: white;
 }
-
-/* -------- */
 
 .sobre-nosotros {
     padding: 60px 0;
@@ -83,13 +80,9 @@
 
 .sobre-nosotros img {
     max-width: 100%;
-    /* Hace que la imagen sea responsiva */
     height: auto;
-    /* Mantiene la relación de aspecto */
     border-radius: 8px;
-    /* Borda redondeada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Agrega una sombra sutil */
 }
 
 

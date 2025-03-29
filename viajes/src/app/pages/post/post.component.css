@@ -24,24 +24,20 @@ body {
     transition: color 0.3s, transform 0.3s;
 }
 
-/* Active link */
 .nav-link.active {
     font-weight: bold;
     color: #007bff;
 }
 
-/* Hover effect for links */
 .nav-link:hover {
     color: #ffc107;
     transform: scale(1.1);
 }
 
-/* Spacing between navbar items */
 .nav-item {
     margin-right: 15px;
 }
 
-/* Adding some padding for better visuals */
 .navbar-container .container-fluid {
     padding-left: 30px;
     padding-right: 30px;
@@ -151,7 +147,7 @@ body {
 
 
 
-/* Fondo elegante */
+/* Fondo */
 .fondo {
     background-color: #f0f4f8;
 }
@@ -218,7 +214,6 @@ body {
     background-color: #2980b9;
 }
 
-/* NUEVO DISEÑO PARA LAS NOTICIAS */
 .news-section {
     background-color: #fff;
     padding: 40px;
