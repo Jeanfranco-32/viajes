@@ -12,19 +12,20 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  private servicioService = inject(ServicioService);
+
   posts: Post[] = [];
   categorias: Category[] = [];
   filtroCategoria: string = '';
 
-  constructor(private ServicioService: ServicioService) { }
-
   ngOnInit(): void {
-    this.posts = this.ServicioService.getAll();
-    this.categorias = this.ServicioService.getAllCategories();
-
+    this.posts = this.servicioService.getAll();
+    this.categorias = this.servicioService.getAllCategories();
   }
 
   filtrarPorCategoria(): void {
-    this.posts = this.filtroCategoria ? this.ServicioService.getByCategoria(this.filtroCategoria) : this.ServicioService.getAll();
+    this.posts = this.filtroCategoria
+      ? this.servicioService.getByCategoria(this.filtroCategoria)
+      : this.servicioService.getAll();
   }
 }

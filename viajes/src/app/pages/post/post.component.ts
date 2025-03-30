@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Post } from '../../interfaces/post.interface';
 import { ServicioService } from '../../services/servicio.service';
 import { FormsModule } from '@angular/forms';
@@ -11,28 +11,21 @@ import { DatePipe } from '@angular/common';
   styleUrl: './post.component.css'
 })
 export class PostComponent {
+  private servicioService = inject(ServicioService);
   posts: Post[] = [];
 
-  constructor(private servicioService: ServicioService) { }
-
   ngOnInit(): void {
-    const id = Number(window.location.pathname.split('/').pop());
-    const post = this.servicioService.getById(id);
-    if (post) {
-      this.posts = [post];
-    } else {
-      this.posts = this.servicioService.getAll();
-    }
+    this.loadPost();
   }
 
-  openClick() {
+  openClick(): void {
+    this.loadPost();
+  }
+
+  private loadPost(): void {
     const id = Number(window.location.pathname.split('/').pop());
     const post = this.servicioService.getById(id);
-    if (post) {
-      this.posts = [post];
-    } else {
-      this.posts = this.servicioService.getAll();
-    }
+    this.posts = post ? [post] : this.servicioService.getAll();
   }
 }
 
