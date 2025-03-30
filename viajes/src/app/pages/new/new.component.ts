@@ -33,6 +33,7 @@ export class NewComponent {
     return !!control && control.hasError(errorName) && control.touched;
   }
 
+
   irAHome() {
     this.router.navigate(['/home']);
   }
